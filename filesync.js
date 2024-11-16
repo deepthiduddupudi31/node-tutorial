@@ -1,0 +1,13 @@
+const fs=require('fs');
+const path=require('path');
+const basepath1=path.join('./content','subcontent','first.txt');
+const basepath2=path.join('./content','subcontent','second.txt');
+const first=fs.readFileSync(basepath1,'utf8');
+const second=fs.readFileSync(basepath2,'utf8');
+console.log(first);
+console.log(second);
+const basepath3=path.join('./content','subcontent','third.txt');
+const third=fs.writeFileSync(basepath3,'this is third text file');
+console.log(third);
+const fourth=fs.writeFileSync(basepath3,'    this is created dynamically     and working fine',{flag:'a'});
+console.log(fourth);
